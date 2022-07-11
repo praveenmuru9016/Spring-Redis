@@ -4,37 +4,77 @@ import java.io.Serializable;
 
 public class User implements Serializable {
 
-    private String id;
-    private String name;
-    private Long salary;
+    private Long id;
+    private String firstName = "";
+    private String address = "";
+    private String lastName = "";
+    private String phone = "";
+    private String email = "";
+    private Date birthDate;
 
-    public User(String id, String name, Long salary) {
+    public User(Long id, String firstname, String lastname,String address, String email, Date birthdate) {
         this.id = id;
-        this.name = name;
-        this.salary = salary;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.address = address;
+        this.email = email;
+        this.birthdate = birthdate
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public Long getSalary() {
-        return salary;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setSalary(Long salary) {
-        this.salary = salary;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+    
+     public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Date getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
+    }
     }
 }
